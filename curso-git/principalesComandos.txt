@@ -1,0 +1,18 @@
+
+# comando para iniciar proyecto git
+git init "nombre del proyecto"
+
+git config --global user.name "nombre de usuario"
+git config --global user.email "correo@orreo.cl"
+
+# comando para dejar por defecto la rama main
+git config --global init.defaultBranch main
+
+
+
+
+
+
+git add .
+git commit -m "mensaje de commit"
+git push
