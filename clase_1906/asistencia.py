@@ -1,41 +1,55 @@
-# crear un programa que permita contabilizar la asistencia a clases.
-# se debe guardar la asistencia en un archivo csv con fecha incluida automaticamente
-# tiene que existir un menu principal que pregunte si se quiere guardar asistencia o buscar
-# si se elige guardar, el programa pregunta constantemente el nombre del estudiante y si esta o no presente.
-# esto se debe realizar hata que el usuario decida no seguir guardando asistencia.
-
-# si se elige buscar, el programa debe pedir el nombre del estudiante y la fecha.
-# debe devolver si el alumno estuvo o no presente ese decida
-
-# se deben generar 2 funciones, una para guardar y otra para leer
-
 import os
+from datetime import datetime
+now = datetime.now()
+alumnos=[]
+fecha_asistencia=[]
+
+#Funciones
+
+def guardar_asistencia(alumno):
+    alumnos.append(alumno)
+    fecha_asistencia.append(now.strftime('%d-%m-%Y'))
+
+def buscar_asistencia(alumno):
+    if alumno in alumnos:
+        i = alumnos.index(alumno)
+        print(alumnos[i], fecha_asistencia[i])
+    else:
+        print(f"Lo siento, no encontramos registros de {alumno} en nuestro sistema de asistencia")
+#Fin Funciones
 validador = True
-mensaje="Bienvenidos "
+validador2 = True
 while validador:
-    print("=================================")
-    print("             ASISTENCIA          ")
-    print("=================================")
-    print("\n")
-    print(mensaje)
     print("\n")
     print("1. Guardar Asistencia ")
     print("2. Buscar Asistencia ")
     print("3. Salir ")
-
+    print("4. revisar registros en array ")
+    print("\n")
     opcion=(int(input("Ingrese la opcion deseada ")))
     match opcion:
         case 1:
-            mensaje=("opcion 1")
-            nombre_alumno=inpunt("Ingrese el nombre del alumno que desea registar")
+            os.system("cls")
+            while validador2:
+                alumno=input("Ingrese nombre y apellido de alumno que desea registar,\n escriba terminar para finalizar: ")
+                if alumno == "terminar":
+                    validador2 = False
+                else: 
+                    guardar_asistencia(alumno)
         case 2:
-            mensaje=("opcion 2")
+            os.system("cls")
+            alumno=input("Ingrese el nombre y el apellido del alumno que desea buscar el registro de asistencia : ")
+            buscar_asistencia(alumno)
         case 3:
             os.system("cls")
             print("Adios. ")
             validador = False
+        case 4:
+            os.system("cls")
+            print(alumnos)
+            print(fecha_asistencia)
         case _:
             os.system("cls")
-            mensaje=("OPCION ERRONEA!!!!")
+            mensaje=("ERROR, INTENTE NUEVAMENTE")
         
 

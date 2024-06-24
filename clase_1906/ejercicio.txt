@@ -2,12 +2,12 @@ crear un programa que permita contabilizar la asistencia a clases.
 se debe guardar la asistencia en un archivo csv con fecha incluida automaticamente
 tiene que existir un menu principal que pregunte si se quiere guardar asistencia o buscar
 si se elige guardar, el programa pregunta constantemente el nombre del estudiante y si esta o no presente.
-esto se debe realizar hata que el usuario decida no seguir guardando asistencia.
+esto se debe realizar hasta que el usuario decida no seguir guardando asistencia.
 
 si se elige buscar, el programa debe pedir el nombre del estudiante y la fecha.
-debe devolver si el alumno estuvo o no presente ese decida
+debe devolver si el alumno estuvo o no presente ese dia
 
 se deben generar 2 funciones, una para guardar y otra para leer
 
 def guardar_asistencia(nombre= "nombre como string", asistencia=false)
-def buscar_asistencia(nombre="nombre como sting", asistencia = "30/06/2024")
+def buscar_asistencia(nombre="nombre como string", asistencia = "30-06-2024")
