@@ -1,4 +1,5 @@
 import os
+import csv
 from datetime import datetime
 now = datetime.now()
 alumnos=[]
@@ -9,6 +10,13 @@ fecha_asistencia=[]
 def guardar_asistencia(alumno):
     alumnos.append(alumno)
     fecha_asistencia.append(now.strftime('%d-%m-%Y'))
+    with open(f'Asistencia-{fecha_asistencia}.csv', 'w') as file:
+        for i in range(len(alumnos)):
+            file.write(f"{alumnos[i]} - {fecha_asistencia[i]} \n")
+        
+    
+    
+    
 
 def buscar_asistencia(alumno):
     if alumno in alumnos:
@@ -31,7 +39,7 @@ while validador:
         case 1:
             os.system("cls")
             while validador2:
-                alumno=input("Ingrese nombre y apellido de alumno que desea registar,\n escriba terminar para finalizar: ")
+                alumno=input("Ingrese nombre y apellido de alumno que desea registar,\n escriba terminar para finalizar: ").lower()
                 if alumno == "terminar":
                     validador2 = False
                 else: 
