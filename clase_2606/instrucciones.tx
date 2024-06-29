@@ -1,0 +1,36 @@
+nombre,p1,p2,p3,a1,a2,a3,a4,a5
+
+OSCAR ANTONIO BADILLA AGUILERA,45,48,68,1,1,1,0,1,0,1
+
+
+Actividades:
+
+
+Funciones:
+
+1 - Una función que calcule la nota de presentación al EXAMEN
+
+Entradas: p1,p2,p3 
+
+Salidas: Nota de presentacion según la siguiente fórmula
+
+p1 tiene ponderación del 30%
+
+p2 tiene ponderacion del 35%
+
+p3 tiene ponderacion del 35%
+
+
+2 - Un función que calcule el porcentaje de asistencia y entregue si reprueba por inasistencia (RI)
+
+Entradas: Las asistencias COMO UNA LISTA
+
+Salidas: Si el estudiante aprueba o no
+
+
+3 - Un función que guarde (actualice) en el archivo la NP y la RI
+
+
+El algoritmo debe leer el archivo, recorrerlo y dejar el archivo actualizado. 
+
+También se debe obtener el promedio ponderado total del curso
