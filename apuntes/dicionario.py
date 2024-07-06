@@ -20,5 +20,10 @@ print(vista_items)
 for valor in vista_valores:
     print(f'Valor de mi_diccionario: {valor}')
 
+for valor in usuario.items():
+    print(valor)
 
 
+
+for valor in hotel[indice].values():
+            print(valor)
